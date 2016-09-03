@@ -22,6 +22,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    // 设置头像的圆角 方法1 // 方法2 kvc
+    // self.iconImage.layer.cornerRadius = 25;
+    // self.iconImage.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

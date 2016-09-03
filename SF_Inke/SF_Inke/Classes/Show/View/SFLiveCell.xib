@@ -23,9 +23,18 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2rW-cY-L8D" secondAttribute="height" multiplier="10:10" id="wy1-Xx-ZKo"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvP-oQ-qM9">
-                                <rect key="frame" x="70" y="10" width="47" height="23"/>
+                                <rect key="frame" x="70" y="10" width="197" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="pFY-1d-83o"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -93,7 +102,7 @@
                 <outlet property="nameLable" destination="VvP-oQ-qM9" id="79Y-S3-ujY"/>
                 <outlet property="watchLable" destination="JMv-S8-Q2J" id="U0k-Cm-H6O"/>
             </connections>
-            <point key="canvasLocation" x="186.5" y="539"/>
+            <point key="canvasLocation" x="-38.5" y="556"/>
         </tableViewCell>
     </objects>
     <resources>

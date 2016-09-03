@@ -30,6 +30,7 @@ static NSString * const ID = @"livecell";
 }
 
 - (void)initUI {
+    
 
     // 设置内边距
     CGFloat bottom = self.tabBarController.tabBar.sf_height;
