@@ -1,0 +1,33 @@
+//
+//  SF_Inke.pch
+//  SF_Inke
+//
+//  Created by ma c on 16/9/2.
+//  Copyright © 2016年 shifei. All rights reserved.
+//
+
+#ifndef SF_Inke_pch
+#define SF_Inke_pch
+
+#import <UIImageView+WebCache.h>
+#import <MJExtension.h>
+#import <YYKit.h>
+#import <Masonry.h>
+#import <AFNetworking.h>
+#import "SFMacros.h"
+#import "UIView+SFFrame.h"
+#import "APIConfig.h"
+#import "SFHttpTools.h"
+#import "UIImageView+SFSDWebImage.h"
+
+#ifdef DEBUG  // 调试
+
+#define SFLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define SFLog(...)
+
+#endif
+
+#endif /* SF_Inke_pch */
