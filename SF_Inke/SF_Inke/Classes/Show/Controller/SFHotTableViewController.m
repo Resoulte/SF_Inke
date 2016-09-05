@@ -9,6 +9,7 @@
 #import "SFHotTableViewController.h"
 #import "SFShowHandler.h"
 #import "SFLiveCell.h"
+#import "SFPlayerViewController.h"
 
 @interface SFHotTableViewController ()
 
@@ -79,6 +80,23 @@ static NSString * const ID = @"livecell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     return 70 + SCREEN_WIDTH;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SFLiveItem *liveItem = self.dataArray[indexPath.row];
+    
+    SFPlayerViewController *play = [[SFPlayerViewController alloc] init];
+    play.liveItem = liveItem;
+    
+    [self.navigationController pushViewController:play animated:YES];
+    
+    
+    // 系统自带的播放器播放不了
+//    MPMoviePlayerViewController *mp = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:liveItem.streamAddr]];
+//    [self presentViewController:mp animated:YES completion:nil];
+    
 }
 
 #pragma mark - setter and getter
