@@ -8,6 +8,8 @@
 
 #import "SFPlayerViewController.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
+#import "SFLiveChatViewController.h"
+#import "AppDelegate.h"
 
 
 @interface SFPlayerViewController ()
@@ -19,9 +21,21 @@
 /**关闭按钮*/
 @property (strong, nonatomic) UIButton *closeBtn;
 
+/**聊天控制器*/
+@property (strong, nonatomic) SFLiveChatViewController *liveChatVC;
+
 @end
 
 @implementation SFPlayerViewController
+
+- (SFLiveChatViewController *)liveChatVC {
+
+    if (!_liveChatVC) {
+        _liveChatVC = [[SFLiveChatViewController alloc] init];
+    }
+    
+    return _liveChatVC;
+}
 
 - (UIButton *)closeBtn {
 
@@ -45,9 +59,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self initPlayer];
     
     [self initUI];
+    
+    [self addChildVC];
 }
 
 
@@ -78,15 +96,32 @@
     // 毛玻璃加入图片view
     [self.blureImageView addSubview:ev];
     
-    [self.view addSubview:self.closeBtn];
+    
+}
+
+- (void)addChildVC {
+
+    [self addChildViewController:self.liveChatVC];
+    [self.view addSubview:self.liveChatVC.view];
+    
+    [self.liveChatVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    self.liveChatVC.liveItem = self.liveItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    self.navigationController.navigationBar.hidden = YES;
+    
     [self installMovieNotificationObservers];
     
     [self.player prepareToPlay];
+    
+    UIWindow *w = [[UIApplication sharedApplication].delegate window];
+    
+    [w addSubview:self.closeBtn];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -94,6 +129,8 @@
     
     [self.player shutdown];
     [self removeMovieNotificationObservers];
+    
+    [self.closeBtn removeFromSuperview];
 }
 
 - (void)loadStateDidChange:(NSNotification*)notification

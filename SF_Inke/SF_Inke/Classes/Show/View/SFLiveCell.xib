@@ -80,7 +80,7 @@
                             <constraint firstAttribute="width" secondItem="8D6-9a-ayS" secondAttribute="height" id="Psn-z6-dTg"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_tag_live" translatesAutoresizingMaskIntoConstraints="NO" id="Lgj-3H-nBB">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="live_tag_live" translatesAutoresizingMaskIntoConstraints="NO" id="Lgj-3H-nBB">
                         <rect key="frame" x="300" y="85" width="51" height="19"/>
                     </imageView>
                 </subviews>

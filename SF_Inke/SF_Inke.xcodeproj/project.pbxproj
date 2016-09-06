@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		042061C21D7DB7E500E60350 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF501D7DB168006E2D52 /* IJKMediaFramework.framework */; };
+		042061C61D7DC4F200E60350 /* SFLiveChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */; };
+		042061C71D7DC4F200E60350 /* SFLiveChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */; };
 		0483FF311D7D48A3006E2D52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF301D7D48A3006E2D52 /* AudioToolbox.framework */; };
 		0483FF371D7D4914006E2D52 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF361D7D4914006E2D52 /* AVFoundation.framework */; };
 		0483FF391D7D4923006E2D52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF381D7D4923006E2D52 /* CoreGraphics.framework */; };
@@ -51,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042061C31D7DC4F200E60350 /* SFLiveChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLiveChatViewController.h; sourceTree = "<group>"; };
+		042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLiveChatViewController.m; sourceTree = "<group>"; };
+		042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFLiveChatViewController.xib; sourceTree = "<group>"; };
 		0483FF301D7D48A3006E2D52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0483FF361D7D4914006E2D52 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0483FF381D7D4923006E2D52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -367,6 +372,9 @@
 				04FDE0BE1D79C8C300391989 /* SFHotTableViewController.m */,
 				0483FF4D1D7DAF5E006E2D52 /* SFPlayerViewController.h */,
 				0483FF4E1D7DAF5E006E2D52 /* SFPlayerViewController.m */,
+				042061C31D7DC4F200E60350 /* SFLiveChatViewController.h */,
+				042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */,
+				042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */,
 				04FDE0C61D7A5B6600391989 /* SFNearViewController.h */,
 				04FDE0C71D7A5B6600391989 /* SFNearViewController.m */,
 				04FDE0C31D79C8FE00391989 /* SFFocusTableViewController.h */,
@@ -518,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042061C71D7DC4F200E60350 /* SFLiveChatViewController.xib in Resources */,
 				04FDE0FF1D7AF03300391989 /* SFLiveCell.xib in Resources */,
 				04FDE0BC1D79A11100391989 /* SFLaunchViewController.xib in Resources */,
 				04FDE07B1D787ADB00391989 /* Assets.xcassets in Resources */,
@@ -593,6 +602,7 @@
 				04FDE0C51D79C8FE00391989 /* SFFocusTableViewController.m in Sources */,
 				04FDE0BB1D79A11100391989 /* SFLaunchViewController.m in Sources */,
 				04FDE0E01D7AD38000391989 /* SFHttpTools.m in Sources */,
+				042061C61D7DC4F200E60350 /* SFLiveChatViewController.m in Sources */,
 				04FDE0BF1D79C8C300391989 /* SFHotTableViewController.m in Sources */,
 				04FDE0701D787ADB00391989 /* main.m in Sources */,
 				0483FF4F1D7DAF5E006E2D52 /* SFPlayerViewController.m in Sources */,
