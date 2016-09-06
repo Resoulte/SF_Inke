@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="iconImageView" destination="AYq-Xk-yNP" id="ZF7-6p-I3i"/>
                 <outlet property="peoplecountLable" destination="aA1-NG-hDs" id="ycv-eW-8Fb"/>
+                <outlet property="shareBtn" destination="IXD-gq-4we" id="AME-IH-z7L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
