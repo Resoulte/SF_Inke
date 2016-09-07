@@ -30,4 +30,9 @@
 @property (nonatomic, strong) NSString * streamAddr;
 @property (nonatomic, assign) NSInteger version;
 
+/**距离*/
+@property (copy, nonatomic) NSString * distance;
+
+@property (nonatomic, getter=isShow) BOOL show;
+
 @end

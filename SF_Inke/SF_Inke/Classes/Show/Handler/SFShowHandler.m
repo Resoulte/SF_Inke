@@ -8,6 +8,7 @@
 
 #import "SFShowHandler.h"
 #import "SFLiveItem.h"
+#import "SFLocationManager.h"
 
 @implementation SFShowHandler
 
@@ -28,4 +29,25 @@
     } ];
 }
 
++ (void)excuteGetShowNearTaskWithSussess:(SuccessBlock)success failed:(FailedBlock)faile {
+    
+    SFLocationManager *locationManager = [SFLocationManager sharedManager];
+    
+    NSDictionary *params = @{
+                             @"uid" : @"85149891",
+                             @"latitude":@"40.090562",
+                             @"longitude":@"116.413353"
+                             };
+    
+    [SFHttpTools getWithPath:API_NearLive params:params success:^(id json) {
+        if ([json[@"dm_error"] integerValue]) {
+            faile(json);
+        } else {
+            NSArray *lives = [SFLiveItem mj_objectArrayWithKeyValuesArray:json[@"lives"]];
+            success(lives);
+        }
+    } failure:^(NSError *error) {
+        faile(error);
+    }];
+}
 @end

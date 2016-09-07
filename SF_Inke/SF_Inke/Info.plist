@@ -35,5 +35,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>如果想使用定位服务，建议开启</string>
 </dict>
 </plist>

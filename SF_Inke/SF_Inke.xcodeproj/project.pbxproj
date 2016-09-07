@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040A63031D7EEC5A00020078 /* SFLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A63021D7EEC5A00020078 /* SFLocationManager.m */; };
 		042061C21D7DB7E500E60350 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF501D7DB168006E2D52 /* IJKMediaFramework.framework */; };
 		042061C61D7DC4F200E60350 /* SFLiveChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */; };
 		042061C71D7DC4F200E60350 /* SFLiveChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */; };
@@ -23,6 +24,10 @@
 		0483FF491D7D498C006E2D52 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF481D7D498C006E2D52 /* QuartzCore.framework */; };
 		0483FF4B1D7D4999006E2D52 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF4A1D7D4999006E2D52 /* VideoToolbox.framework */; };
 		0483FF4F1D7DAF5E006E2D52 /* SFPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483FF4E1D7DAF5E006E2D52 /* SFPlayerViewController.m */; };
+		04A518201D7EFD0400880EC8 /* SFNearCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5181E1D7EFD0400880EC8 /* SFNearCell.m */; };
+		04A518211D7EFD0400880EC8 /* SFNearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A5181F1D7EFD0400880EC8 /* SFNearCell.xib */; };
+		04A518271D7F01FB00880EC8 /* SFNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A518251D7F01FB00880EC8 /* SFNearViewController.m */; };
+		04A518281D7F01FB00880EC8 /* SFNearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A518261D7F01FB00880EC8 /* SFNearViewController.xib */; };
 		04FDE0701D787ADB00391989 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE06F1D787ADB00391989 /* main.m */; };
 		04FDE07B1D787ADB00391989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FDE07A1D787ADB00391989 /* Assets.xcassets */; };
 		04FDE09C1D787B3700391989 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0971D787B3700391989 /* AppDelegate.m */; };
@@ -36,7 +41,6 @@
 		04FDE0BC1D79A11100391989 /* SFLaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FDE0BA1D79A11100391989 /* SFLaunchViewController.xib */; };
 		04FDE0BF1D79C8C300391989 /* SFHotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0BE1D79C8C300391989 /* SFHotTableViewController.m */; };
 		04FDE0C51D79C8FE00391989 /* SFFocusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0C41D79C8FE00391989 /* SFFocusTableViewController.m */; };
-		04FDE0C81D7A5B6600391989 /* SFNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0C71D7A5B6600391989 /* SFNearViewController.m */; };
 		04FDE0CD1D7A67C000391989 /* SFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0CC1D7A67C000391989 /* SFMainViewController.m */; };
 		04FDE0D01D7A6CFC00391989 /* UIView+SFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0CF1D7A6CFC00391989 /* UIView+SFFrame.m */; };
 		04FDE0D31D7AADAC00391989 /* SFMainTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0D21D7AADAC00391989 /* SFMainTopView.m */; };
@@ -53,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040A63011D7EEC5A00020078 /* SFLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLocationManager.h; sourceTree = "<group>"; };
+		040A63021D7EEC5A00020078 /* SFLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLocationManager.m; sourceTree = "<group>"; };
 		042061C31D7DC4F200E60350 /* SFLiveChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLiveChatViewController.h; sourceTree = "<group>"; };
 		042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLiveChatViewController.m; sourceTree = "<group>"; };
 		042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFLiveChatViewController.xib; sourceTree = "<group>"; };
@@ -71,6 +77,12 @@
 		0483FF4D1D7DAF5E006E2D52 /* SFPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPlayerViewController.h; sourceTree = "<group>"; };
 		0483FF4E1D7DAF5E006E2D52 /* SFPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFPlayerViewController.m; sourceTree = "<group>"; };
 		0483FF501D7DB168006E2D52 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		04A5181D1D7EFD0400880EC8 /* SFNearCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFNearCell.h; sourceTree = "<group>"; };
+		04A5181E1D7EFD0400880EC8 /* SFNearCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNearCell.m; sourceTree = "<group>"; };
+		04A5181F1D7EFD0400880EC8 /* SFNearCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFNearCell.xib; sourceTree = "<group>"; };
+		04A518241D7F01FB00880EC8 /* SFNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFNearViewController.h; sourceTree = "<group>"; };
+		04A518251D7F01FB00880EC8 /* SFNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNearViewController.m; sourceTree = "<group>"; };
+		04A518261D7F01FB00880EC8 /* SFNearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFNearViewController.xib; sourceTree = "<group>"; };
 		04FDE06B1D787ADB00391989 /* SF_Inke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SF_Inke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FDE06F1D787ADB00391989 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04FDE07A1D787ADB00391989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,8 +109,6 @@
 		04FDE0BE1D79C8C300391989 /* SFHotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHotTableViewController.m; sourceTree = "<group>"; };
 		04FDE0C31D79C8FE00391989 /* SFFocusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFFocusTableViewController.h; sourceTree = "<group>"; };
 		04FDE0C41D79C8FE00391989 /* SFFocusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFFocusTableViewController.m; sourceTree = "<group>"; };
-		04FDE0C61D7A5B6600391989 /* SFNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFNearViewController.h; sourceTree = "<group>"; };
-		04FDE0C71D7A5B6600391989 /* SFNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNearViewController.m; sourceTree = "<group>"; };
 		04FDE0CB1D7A67C000391989 /* SFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMainViewController.h; sourceTree = "<group>"; };
 		04FDE0CC1D7A67C000391989 /* SFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMainViewController.m; sourceTree = "<group>"; };
 		04FDE0CE1D7A6CFC00391989 /* UIView+SFFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SFFrame.h"; sourceTree = "<group>"; };
@@ -228,6 +238,8 @@
 		04FDE0881D787B3700391989 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				040A63011D7EEC5A00020078 /* SFLocationManager.h */,
+				040A63021D7EEC5A00020078 /* SFLocationManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -375,8 +387,9 @@
 				042061C31D7DC4F200E60350 /* SFLiveChatViewController.h */,
 				042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */,
 				042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */,
-				04FDE0C61D7A5B6600391989 /* SFNearViewController.h */,
-				04FDE0C71D7A5B6600391989 /* SFNearViewController.m */,
+				04A518241D7F01FB00880EC8 /* SFNearViewController.h */,
+				04A518251D7F01FB00880EC8 /* SFNearViewController.m */,
+				04A518261D7F01FB00880EC8 /* SFNearViewController.xib */,
 				04FDE0C31D79C8FE00391989 /* SFFocusTableViewController.h */,
 				04FDE0C41D79C8FE00391989 /* SFFocusTableViewController.m */,
 			);
@@ -401,6 +414,9 @@
 				04FDE0D21D7AADAC00391989 /* SFMainTopView.m */,
 				04FDE0FB1D7AF03300391989 /* SFLiveCell.h */,
 				04FDE0FC1D7AF03300391989 /* SFLiveCell.m */,
+				04A5181D1D7EFD0400880EC8 /* SFNearCell.h */,
+				04A5181E1D7EFD0400880EC8 /* SFNearCell.m */,
+				04A5181F1D7EFD0400880EC8 /* SFNearCell.xib */,
 				04FDE0FD1D7AF03300391989 /* SFLiveCell.xib */,
 			);
 			path = View;
@@ -528,6 +544,8 @@
 			files = (
 				042061C71D7DC4F200E60350 /* SFLiveChatViewController.xib in Resources */,
 				04FDE0FF1D7AF03300391989 /* SFLiveCell.xib in Resources */,
+				04A518281D7F01FB00880EC8 /* SFNearViewController.xib in Resources */,
+				04A518211D7EFD0400880EC8 /* SFNearCell.xib in Resources */,
 				04FDE0BC1D79A11100391989 /* SFLaunchViewController.xib in Resources */,
 				04FDE07B1D787ADB00391989 /* Assets.xcassets in Resources */,
 				04FDE0B41D79697D00391989 /* SFMeViewController.xib in Resources */,
@@ -597,22 +615,24 @@
 				04FDE09F1D787E3A00391989 /* SFTabBarViewController.m in Sources */,
 				04FDE0A81D7930E700391989 /* SFTabBar.m in Sources */,
 				04FDE0B31D79697D00391989 /* SFMeViewController.m in Sources */,
+				04A518201D7EFD0400880EC8 /* SFNearCell.m in Sources */,
 				04FDE0A51D79304900391989 /* SFNavgationViewController.m in Sources */,
 				04FDE09C1D787B3700391989 /* AppDelegate.m in Sources */,
 				04FDE0C51D79C8FE00391989 /* SFFocusTableViewController.m in Sources */,
 				04FDE0BB1D79A11100391989 /* SFLaunchViewController.m in Sources */,
+				04A518271D7F01FB00880EC8 /* SFNearViewController.m in Sources */,
 				04FDE0E01D7AD38000391989 /* SFHttpTools.m in Sources */,
 				042061C61D7DC4F200E60350 /* SFLiveChatViewController.m in Sources */,
 				04FDE0BF1D79C8C300391989 /* SFHotTableViewController.m in Sources */,
 				04FDE0701D787ADB00391989 /* main.m in Sources */,
 				0483FF4F1D7DAF5E006E2D52 /* SFPlayerViewController.m in Sources */,
 				04FDE0EE1D7AEB4F00391989 /* SFCreatorItem.m in Sources */,
+				040A63031D7EEC5A00020078 /* SFLocationManager.m in Sources */,
 				04FDE0E11D7AD38000391989 /* UIImageView+SFSDWebImage.m in Sources */,
 				04FDE0F11D7AEC6C00391989 /* SFMJExtensionConfig.m in Sources */,
 				04FDE0E41D7AD41B00391989 /* SFBaseHandler.m in Sources */,
 				04FDE0CD1D7A67C000391989 /* SFMainViewController.m in Sources */,
 				04FDE0E81D7AD5C600391989 /* SFShowHandler.m in Sources */,
-				04FDE0C81D7A5B6600391989 /* SFNearViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

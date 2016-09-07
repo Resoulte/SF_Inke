@@ -53,6 +53,7 @@
 - (void)close {
 
     [self.navigationController popViewControllerAnimated:YES];
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)viewDidLoad {
