@@ -9,6 +9,7 @@
 #import "SFShowHandler.h"
 #import "SFLiveItem.h"
 #import "SFLocationManager.h"
+#import "SFAdvertiseItem.h"
 
 @implementation SFShowHandler
 
@@ -45,6 +46,20 @@
         } else {
             NSArray *lives = [SFLiveItem mj_objectArrayWithKeyValuesArray:json[@"lives"]];
             success(lives);
+        }
+    } failure:^(NSError *error) {
+        faile(error);
+    }];
+}
+
++ (void)excuteGetAdverdiseTaskWithSussess:(SuccessBlock)success failed:(FailedBlock)faile {
+
+    [SFHttpTools getWithPath:API_Advertise params:nil success:^(id json) {
+        if ([json[@"dm_error"] integerValue]) {
+            faile(json);
+        } else {
+            SFAdvertiseItem *adItem = [SFAdvertiseItem mj_objectWithKeyValues:json[@"resources"][0]];
+            success(adItem);
         }
     } failure:^(NSError *error) {
         faile(error);

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SFTabBarViewController.h"
+#import "SFAdvertiseView.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,9 @@
     self.window.rootViewController = tabBarVC;
     
     [self.window makeKeyAndVisible];
+    
+    SFAdvertiseView *adView = [SFAdvertiseView loadAdvertiseView];
+    [self.window addSubview:adView];
     
     
     return YES;

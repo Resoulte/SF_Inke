@@ -15,4 +15,8 @@
 
 /**获取附近的网络请求*/
 + (void)excuteGetShowNearTaskWithSussess:(SuccessBlock)success failed:(FailedBlock)faile;
+
+/**获取广告的网络请求*/
++ (void)excuteGetAdverdiseTaskWithSussess:(SuccessBlock)success failed:(FailedBlock)faile;
+
 @end

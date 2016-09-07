@@ -11,6 +11,11 @@
 		042061C21D7DB7E500E60350 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF501D7DB168006E2D52 /* IJKMediaFramework.framework */; };
 		042061C61D7DC4F200E60350 /* SFLiveChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */; };
 		042061C71D7DC4F200E60350 /* SFLiveChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */; };
+		044938CA1D7FA1810058677B /* SFAdvertiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044938C91D7FA1810058677B /* SFAdvertiseView.m */; };
+		044938CF1D7FBE070058677B /* SFCatchHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 044938CE1D7FBE070058677B /* SFCatchHelp.m */; };
+		044938D11D7FCEF50058677B /* SFAdvertiseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044938D01D7FCEF50058677B /* SFAdvertiseView.xib */; };
+		044938D41D80029C0058677B /* SFInfomationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044938D31D80029C0058677B /* SFInfomationView.m */; };
+		044938D61D8002BB0058677B /* SFInfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044938D51D8002BB0058677B /* SFInfomationView.xib */; };
 		0483FF311D7D48A3006E2D52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF301D7D48A3006E2D52 /* AudioToolbox.framework */; };
 		0483FF371D7D4914006E2D52 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF361D7D4914006E2D52 /* AVFoundation.framework */; };
 		0483FF391D7D4923006E2D52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF381D7D4923006E2D52 /* CoreGraphics.framework */; };
@@ -28,6 +33,7 @@
 		04A518211D7EFD0400880EC8 /* SFNearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A5181F1D7EFD0400880EC8 /* SFNearCell.xib */; };
 		04A518271D7F01FB00880EC8 /* SFNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A518251D7F01FB00880EC8 /* SFNearViewController.m */; };
 		04A518281D7F01FB00880EC8 /* SFNearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A518261D7F01FB00880EC8 /* SFNearViewController.xib */; };
+		04A5182B1D7F9EAE00880EC8 /* SFAdvertiseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5182A1D7F9EAE00880EC8 /* SFAdvertiseItem.m */; };
 		04FDE0701D787ADB00391989 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE06F1D787ADB00391989 /* main.m */; };
 		04FDE07B1D787ADB00391989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FDE07A1D787ADB00391989 /* Assets.xcassets */; };
 		04FDE09C1D787B3700391989 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE0971D787B3700391989 /* AppDelegate.m */; };
@@ -62,6 +68,14 @@
 		042061C31D7DC4F200E60350 /* SFLiveChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLiveChatViewController.h; sourceTree = "<group>"; };
 		042061C41D7DC4F200E60350 /* SFLiveChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLiveChatViewController.m; sourceTree = "<group>"; };
 		042061C51D7DC4F200E60350 /* SFLiveChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFLiveChatViewController.xib; sourceTree = "<group>"; };
+		044938C81D7FA1810058677B /* SFAdvertiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAdvertiseView.h; sourceTree = "<group>"; };
+		044938C91D7FA1810058677B /* SFAdvertiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAdvertiseView.m; sourceTree = "<group>"; };
+		044938CD1D7FBE070058677B /* SFCatchHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCatchHelp.h; sourceTree = "<group>"; };
+		044938CE1D7FBE070058677B /* SFCatchHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCatchHelp.m; sourceTree = "<group>"; };
+		044938D01D7FCEF50058677B /* SFAdvertiseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFAdvertiseView.xib; sourceTree = "<group>"; };
+		044938D21D80029C0058677B /* SFInfomationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFInfomationView.h; sourceTree = "<group>"; };
+		044938D31D80029C0058677B /* SFInfomationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFInfomationView.m; sourceTree = "<group>"; };
+		044938D51D8002BB0058677B /* SFInfomationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFInfomationView.xib; sourceTree = "<group>"; };
 		0483FF301D7D48A3006E2D52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0483FF361D7D4914006E2D52 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0483FF381D7D4923006E2D52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +97,8 @@
 		04A518241D7F01FB00880EC8 /* SFNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFNearViewController.h; sourceTree = "<group>"; };
 		04A518251D7F01FB00880EC8 /* SFNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNearViewController.m; sourceTree = "<group>"; };
 		04A518261D7F01FB00880EC8 /* SFNearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFNearViewController.xib; sourceTree = "<group>"; };
+		04A518291D7F9EAE00880EC8 /* SFAdvertiseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAdvertiseItem.h; sourceTree = "<group>"; };
+		04A5182A1D7F9EAE00880EC8 /* SFAdvertiseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAdvertiseItem.m; sourceTree = "<group>"; };
 		04FDE06B1D787ADB00391989 /* SF_Inke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SF_Inke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FDE06F1D787ADB00391989 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04FDE07A1D787ADB00391989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -240,6 +256,8 @@
 			children = (
 				040A63011D7EEC5A00020078 /* SFLocationManager.h */,
 				040A63021D7EEC5A00020078 /* SFLocationManager.m */,
+				044938CD1D7FBE070058677B /* SFCatchHelp.h */,
+				044938CE1D7FBE070058677B /* SFCatchHelp.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -349,6 +367,9 @@
 		04FDE0941D787B3700391989 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				044938D21D80029C0058677B /* SFInfomationView.h */,
+				044938D31D80029C0058677B /* SFInfomationView.m */,
+				044938D51D8002BB0058677B /* SFInfomationView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +424,8 @@
 				04FDE0EA1D7AEB1D00391989 /* SFLiveItem.m */,
 				04FDE0EC1D7AEB4F00391989 /* SFCreatorItem.h */,
 				04FDE0ED1D7AEB4F00391989 /* SFCreatorItem.m */,
+				04A518291D7F9EAE00880EC8 /* SFAdvertiseItem.h */,
+				04A5182A1D7F9EAE00880EC8 /* SFAdvertiseItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,6 +441,9 @@
 				04A5181E1D7EFD0400880EC8 /* SFNearCell.m */,
 				04A5181F1D7EFD0400880EC8 /* SFNearCell.xib */,
 				04FDE0FD1D7AF03300391989 /* SFLiveCell.xib */,
+				044938C81D7FA1810058677B /* SFAdvertiseView.h */,
+				044938C91D7FA1810058677B /* SFAdvertiseView.m */,
+				044938D01D7FCEF50058677B /* SFAdvertiseView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,6 +575,8 @@
 				04FDE0BC1D79A11100391989 /* SFLaunchViewController.xib in Resources */,
 				04FDE07B1D787ADB00391989 /* Assets.xcassets in Resources */,
 				04FDE0B41D79697D00391989 /* SFMeViewController.xib in Resources */,
+				044938D11D7FCEF50058677B /* SFAdvertiseView.xib in Resources */,
+				044938D61D8002BB0058677B /* SFInfomationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,10 +638,12 @@
 				04FDE0AC1D79687D00391989 /* SFBaseViewController.m in Sources */,
 				04FDE0D01D7A6CFC00391989 /* UIView+SFFrame.m in Sources */,
 				04FDE0FE1D7AF03300391989 /* SFLiveCell.m in Sources */,
+				044938CF1D7FBE070058677B /* SFCatchHelp.m in Sources */,
 				04FDE0EB1D7AEB1D00391989 /* SFLiveItem.m in Sources */,
 				04FDE0D31D7AADAC00391989 /* SFMainTopView.m in Sources */,
 				04FDE09F1D787E3A00391989 /* SFTabBarViewController.m in Sources */,
 				04FDE0A81D7930E700391989 /* SFTabBar.m in Sources */,
+				04A5182B1D7F9EAE00880EC8 /* SFAdvertiseItem.m in Sources */,
 				04FDE0B31D79697D00391989 /* SFMeViewController.m in Sources */,
 				04A518201D7EFD0400880EC8 /* SFNearCell.m in Sources */,
 				04FDE0A51D79304900391989 /* SFNavgationViewController.m in Sources */,
@@ -625,6 +655,8 @@
 				042061C61D7DC4F200E60350 /* SFLiveChatViewController.m in Sources */,
 				04FDE0BF1D79C8C300391989 /* SFHotTableViewController.m in Sources */,
 				04FDE0701D787ADB00391989 /* main.m in Sources */,
+				044938CA1D7FA1810058677B /* SFAdvertiseView.m in Sources */,
+				044938D41D80029C0058677B /* SFInfomationView.m in Sources */,
 				0483FF4F1D7DAF5E006E2D52 /* SFPlayerViewController.m in Sources */,
 				04FDE0EE1D7AEB4F00391989 /* SFCreatorItem.m in Sources */,
 				040A63031D7EEC5A00020078 /* SFLocationManager.m in Sources */,
