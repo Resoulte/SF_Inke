@@ -24,5 +24,8 @@
 //广告地址
 #define API_Advertise @"advertise/get"
 
+//播放地址
+#define Live_ShiFei @"rtmp://live.hkstv.hk.lxdns.com:1935/live/shifei"
+
 
 #endif /* APIConfig_h */

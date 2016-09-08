@@ -38,12 +38,19 @@
 
     _liveItem = liveItem;
     
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", IMAGE_HOST, liveItem.creator.portrait]] placeholderImage:[UIImage imageNamed:@"default_room"]];
     self.nameLable.text = liveItem.creator.nick;
     self.addressLable.text = liveItem.city;
     self.watchLable.text = [@(liveItem.onlineUsers) stringValue];
-    [self.bigImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", IMAGE_HOST, liveItem.creator.portrait]] placeholderImage:[UIImage imageNamed:@"default_room"]];
     
+    if ([liveItem.creator.portrait isEqualToString:@"dahuan"]) {
+        self.iconImage.image = [UIImage imageNamed:@"dahuan"];
+        self.bigImage.image = [UIImage imageNamed:@"dahuan"];
+    } else {
+    
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", IMAGE_HOST, liveItem.creator.portrait]] placeholderImage:[UIImage imageNamed:@"default_room"]];
+
+    [self.bigImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", IMAGE_HOST, liveItem.creator.portrait]] placeholderImage:[UIImage imageNamed:@"default_room"]];
+    }
 }
 
 @end

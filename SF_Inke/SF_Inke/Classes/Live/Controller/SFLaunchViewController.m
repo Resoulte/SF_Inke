@@ -7,6 +7,7 @@
 //
 
 #import "SFLaunchViewController.h"
+#import "LFLivePreview.h"
 
 @interface SFLaunchViewController ()
 
@@ -17,6 +18,17 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 
+}
+- (IBAction)startLive:(id)sender {
+    
+    UIView *blackView = [[UIView alloc] initWithFrame:self.view.bounds];
+    blackView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:blackView];
+    
+    LFLivePreview *preView = [[LFLivePreview alloc] initWithFrame:self.view.bounds];
+    preView.vc = self;
+    [self.view addSubview:preView];
+    
 }
 
 - (void)viewDidLoad {

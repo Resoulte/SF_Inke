@@ -25,20 +25,56 @@
                         <action selector="closeLiveClick:" destination="-1" eventType="touchUpInside" id="E1Q-zS-0YF"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="给直播写个标题吧" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eo-eS-DiT">
+                    <rect key="frame" x="175" y="218" width="250" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="TMS-O6-zFi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sk-dk-XSm">
+                    <rect key="frame" x="175" y="278" width="250" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="开始直播" backgroundImage="room_button">
+                        <color key="titleColor" red="0.31104311779999999" green="0.92527567359999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="startLive:" destination="-1" eventType="touchUpInside" id="z3y-rt-DeD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ty-hH-TZd">
+                    <rect key="frame" x="10" y="20" width="68" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="北京市" image="launch_map_on"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="3ty-hH-TZd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="4EQ-4s-zfJ"/>
                 <constraint firstAttribute="trailing" secondItem="PCZ-V3-sHK" secondAttribute="trailing" id="7He-iU-RKP"/>
                 <constraint firstAttribute="bottom" secondItem="PCZ-V3-sHK" secondAttribute="bottom" id="7yI-DR-B3L"/>
+                <constraint firstItem="PCZ-V3-sHK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="A7P-vf-8b9"/>
                 <constraint firstItem="PCZ-V3-sHK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cbi-Kb-Mhy"/>
                 <constraint firstAttribute="trailing" secondItem="IwN-EA-3us" secondAttribute="trailing" constant="20" id="GG8-Qw-gf7"/>
+                <constraint firstItem="8sk-dk-XSm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ISV-dQ-aOS"/>
                 <constraint firstItem="PCZ-V3-sHK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vdb-lS-B6h"/>
+                <constraint firstItem="8sk-dk-XSm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bKD-Id-vsG"/>
                 <constraint firstItem="IwN-EA-3us" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="cVN-xV-cZg"/>
+                <constraint firstItem="PCZ-V3-sHK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fNk-ZG-mmn"/>
+                <constraint firstItem="5eo-eS-DiT" firstAttribute="trailing" secondItem="8sk-dk-XSm" secondAttribute="trailing" id="gA9-L9-lpW"/>
+                <constraint firstItem="3ty-hH-TZd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="hbz-mk-zjW"/>
+                <constraint firstItem="5eo-eS-DiT" firstAttribute="leading" secondItem="8sk-dk-XSm" secondAttribute="leading" id="ugn-Rm-78S"/>
+                <constraint firstItem="8sk-dk-XSm" firstAttribute="top" secondItem="5eo-eS-DiT" secondAttribute="bottom" constant="30" id="ukE-9Q-CLF"/>
+                <constraint firstItem="5eo-eS-DiT" firstAttribute="leading" secondItem="8sk-dk-XSm" secondAttribute="leading" id="vj6-lD-unq"/>
+                <constraint firstItem="5eo-eS-DiT" firstAttribute="trailing" secondItem="8sk-dk-XSm" secondAttribute="trailing" id="x99-Oj-CDi"/>
             </constraints>
         </view>
     </objects>
     <resources>
         <image name="bg_zbfx" width="250" height="444"/>
         <image name="launch_close" width="64" height="64"/>
+        <image name="launch_map_on" width="26" height="26"/>
+        <image name="room_button" width="250" height="44"/>
     </resources>
 </document>

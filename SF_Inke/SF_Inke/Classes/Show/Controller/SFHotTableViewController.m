@@ -19,7 +19,7 @@
 @end
 
 
-static NSString * const ID = @"livecell";
+static NSString *ID = @"livecell";
 @implementation SFHotTableViewController
 
 - (void)viewDidLoad {

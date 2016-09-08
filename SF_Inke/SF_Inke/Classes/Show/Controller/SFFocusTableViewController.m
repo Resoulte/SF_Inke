@@ -7,21 +7,61 @@
 //
 
 #import "SFFocusTableViewController.h"
+#import "SFLiveCell.h"
+#import "SFPlayerViewController.h"
+
 
 @interface SFFocusTableViewController ()
 
+/**数据*/
+@property (strong, nonatomic) NSArray *dataArray;
+
 @end
+
+static NSString *ID = @"livecell";
+
 
 @implementation SFFocusTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self initUI];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadData];
+}
+
+- (void)initUI {
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // 设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.sf_height;
+    // 控制上面
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottom, 0);
+    //    // 控制右边指示条
+    //    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"SFLiveCell" bundle:nil] forCellReuseIdentifier:ID];
+}
+
+- (void)loadData {
+    
+    SFLiveItem *liveItem = [[SFLiveItem alloc] init];
+    liveItem.city = @"北京";
+    liveItem.onlineUsers = 100;
+    liveItem.streamAddr = Live_ShiFei;
+    
+    SFCreatorItem * createItem = [[SFCreatorItem alloc] init];
+    liveItem.creator = createItem;
+    
+    createItem.nick = @"大欢";
+    createItem.portrait = @"dahuan";
+    
+    self.dataArray = @[liveItem];
+    
+    [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,65 +72,41 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 50;
+    return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
-    }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@--%ld", [self class], indexPath.row];
+    SFLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
+    cell.liveItem = self.dataArray[indexPath.row];
     
     return cell;
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 70 + SCREEN_WIDTH;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SFLiveItem *liveItem = self.dataArray[indexPath.row];
+    
+    SFPlayerViewController *play = [[SFPlayerViewController alloc] init];
+    play.liveItem = liveItem;
+    
+    [self.navigationController pushViewController:play animated:YES];
+    
+    
+    // 系统自带的播放器播放不了
+    //    MPMoviePlayerViewController *mp = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:liveItem.streamAddr]];
+    //    [self presentViewController:mp animated:YES completion:nil];
+    
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

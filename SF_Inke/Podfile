@@ -11,4 +11,5 @@ pod 'AFNetworking', '~> 3.1.0'
 pod 'MJExtension', '~> 3.0.13'
 pod 'YYKit', '~> 1.0.7'
 pod 'Masonry', '~> 1.0.1'
+pod 'LFLiveKit', '~> 2.2.4.3'
 end
