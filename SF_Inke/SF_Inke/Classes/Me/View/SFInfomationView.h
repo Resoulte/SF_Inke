@@ -10,4 +10,6 @@
 
 @interface SFInfomationView : UIView
 
++ (instancetype)loadinfomationView;
+
 @end

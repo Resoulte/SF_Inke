@@ -7,15 +7,30 @@
 //
 
 #import "SFInfomationView.h"
+#import "SFUserHelp.h"
+
+@interface SFInfomationView ()
+
+@property (weak, nonatomic) IBOutlet UIButton *iconImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *nickName;
+
+
+@end
+
 
 @implementation SFInfomationView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
++ (instancetype)loadinfomationView {
+
+    return [[[NSBundle mainBundle] loadNibNamed:@"SFInfomationView" owner:nil options:nil] lastObject];
+}
+
+- (void)awakeFromNib {
+
+    [self.iconImage setBackgroundImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[SFUserHelp sharedUser].iconUrl]]] forState:UIControlStateNormal];
+    self.nickName.text = [SFUserHelp sharedUser].nickName;
+//    SFLog(@"iconuSER:%@", [SFUserHelp sharedUser].iconUrl);
+}
 @end

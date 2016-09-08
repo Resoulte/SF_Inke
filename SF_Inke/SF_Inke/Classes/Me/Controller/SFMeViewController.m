@@ -7,21 +7,89 @@
 //
 
 #import "SFMeViewController.h"
+#import "SFInfomationView.h"
+#import "SFSettingItem.h"
 
 @interface SFMeViewController ()
+
+/**我的详细信息*/
+@property (strong, nonatomic) SFInfomationView *infomationView;
+
+/**数据源*/
+@property (strong, nonatomic) NSMutableArray *dataList;
 
 @end
 
 @implementation SFMeViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+//    self.view.backgroundColor = RGB(2, 255, 254);
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self initUI];
+    
+    [self loadData];
+    
+}
+
+- (void)initUI {
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView.sectionFooterHeight = 5;
+    self.tableView.rowHeight = 60;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 30, 0);
+}
+
+- (void)loadData {
+    
+    SFSettingItem * set1 = [[SFSettingItem alloc] init];
+    set1.title = @"映客贡献榜";
+    set1.subtitle = @"";
+    set1.vcName = @"";
+    
+    SFSettingItem * set2 = [[SFSettingItem alloc] init];
+    set2.title = @"收益";
+    set2.subtitle = @"0映票";
+    set2.vcName = @"";
+    
+    SFSettingItem * set3 = [[SFSettingItem alloc] init];
+    set3.title = @"账户";
+    set3.subtitle = @"0钻石";
+    set3.vcName = @"";
+    
+    SFSettingItem * set4 = [[SFSettingItem alloc] init];
+    set4.title = @"等级";
+    set4.subtitle = @"3级";
+    set4.vcName = @"";
+    
+    SFSettingItem * set5 = [[SFSettingItem alloc] init];
+    set5.title = @"实名认证";
+    set5.subtitle = @"";
+    set5.vcName = @"";
+    
+    SFSettingItem * set6 = [[SFSettingItem alloc] init];
+    set6.title = @"设置";
+    set6.subtitle = @"";
+    set6.vcName = @"";
+    
+    NSArray *array1 = @[set1, set2, set3];
+    NSArray *array2 = @[set4, set5];
+    NSArray *array3 = @[set6];
+    [self.dataList addObjectsFromArray:@[array1, array2, array3]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,86 +97,67 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return self.dataList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    NSArray *array = self.dataList[section];
+    return array.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     
-    // Configure the cell...
+    SFSettingItem *settingItem = self.dataList[indexPath
+                                               .section][indexPath.row];
+    cell.textLabel.text = settingItem.title;
+    cell.textLabel.textColor = [UIColor grayColor];
+    cell.textLabel.font = [UIFont systemFontOfSize:15];
+
+    cell.detailTextLabel.text = settingItem.subtitle;
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    if (section == 0) {
+        return self.infomationView;
+    }
     
-    // Pass the selected object to the new view controller.
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
+    if (section == 0) {
+        return SCREEN_HEIGHT / 2;
+    }
+    return 0.1;
+}
+
+#pragma mark - setter and getter
+- (SFInfomationView *)infomationView {
+
+    if (!_infomationView) {
+        _infomationView = [SFInfomationView loadinfomationView];
+        _infomationView.frame = CGRectMake(0, 0, 0, SCREEN_HEIGHT * 0.3);
+    }
+    return _infomationView;
+}
+
+- (NSMutableArray *)dataList {
+
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    return _dataList;
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

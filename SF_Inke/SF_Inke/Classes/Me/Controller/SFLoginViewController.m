@@ -47,7 +47,7 @@
             self.view.window.rootViewController = [[SFTabBarViewController alloc] init];
             
 
-        } else {
+        } else {//413354947
             
             NSLog(@"登录失败");
         }

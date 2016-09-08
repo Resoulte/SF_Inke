@@ -35,6 +35,7 @@
 		044939181D8132FD0058677B /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 044939081D8132FD0058677B /* WeiboSDK.bundle */; };
 		0449391E1D8137220058677B /* AppDelegate+SFUmeng.m in Sources */ = {isa = PBXBuildFile; fileRef = 0449391D1D8137220058677B /* AppDelegate+SFUmeng.m */; };
 		044939211D8142B00058677B /* SFUserHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 044939201D8142B00058677B /* SFUserHelp.m */; };
+		044939241D8190080058677B /* SFSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 044939231D8190080058677B /* SFSettingItem.m */; };
 		0483FF311D7D48A3006E2D52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF301D7D48A3006E2D52 /* AudioToolbox.framework */; };
 		0483FF371D7D4914006E2D52 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF361D7D4914006E2D52 /* AVFoundation.framework */; };
 		0483FF391D7D4923006E2D52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483FF381D7D4923006E2D52 /* CoreGraphics.framework */; };
@@ -142,6 +143,8 @@
 		0449391D1D8137220058677B /* AppDelegate+SFUmeng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SFUmeng.m"; sourceTree = "<group>"; };
 		0449391F1D8142B00058677B /* SFUserHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUserHelp.h; sourceTree = "<group>"; };
 		044939201D8142B00058677B /* SFUserHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUserHelp.m; sourceTree = "<group>"; };
+		044939221D8190080058677B /* SFSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingItem.h; sourceTree = "<group>"; };
+		044939231D8190080058677B /* SFSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingItem.m; sourceTree = "<group>"; };
 		0483FF301D7D48A3006E2D52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0483FF361D7D4914006E2D52 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0483FF381D7D4923006E2D52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -511,6 +514,8 @@
 		04FDE0931D787B3700391989 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				044939221D8190080058677B /* SFSettingItem.h */,
+				044939231D8190080058677B /* SFSettingItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -809,6 +814,7 @@
 				04FDE0D01D7A6CFC00391989 /* UIView+SFFrame.m in Sources */,
 				04FDE0FE1D7AF03300391989 /* SFLiveCell.m in Sources */,
 				044938CF1D7FBE070058677B /* SFCatchHelp.m in Sources */,
+				044939241D8190080058677B /* SFSettingItem.m in Sources */,
 				04FDE0EB1D7AEB1D00391989 /* SFLiveItem.m in Sources */,
 				0449391E1D8137220058677B /* AppDelegate+SFUmeng.m in Sources */,
 				04FDE0D31D7AADAC00391989 /* SFMainTopView.m in Sources */,
