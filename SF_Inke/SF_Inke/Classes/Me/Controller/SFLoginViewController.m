@@ -1,3 +1,4 @@
+
 //
 //  SFLoginViewController.m
 //  SF_Inke
@@ -7,6 +8,9 @@
 //
 
 #import "SFLoginViewController.h"
+#import "UMSocial.h"
+#import "SFUserHelp.h"
+#import "SFTabBarViewController.h"
 
 @interface SFLoginViewController ()
 
@@ -22,6 +26,34 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)weiboLogin:(id)sender {
+    
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        //          获取微博用户名、uid、token等
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+            
+//                        NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+            
+            [SFUserHelp sharedUser].nickName = snsAccount.userName;
+            [SFUserHelp sharedUser].iconUrl = snsAccount.iconURL;
+            [SFUserHelp saveUser];
+            self.view.window.rootViewController = [[SFTabBarViewController alloc] init];
+            
+
+        } else {
+            
+            NSLog(@"登录失败");
+        }
+        
+    });
+
 }
 
 /*
